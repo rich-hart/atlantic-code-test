@@ -1,2 +1,5 @@
 *.swp
+*.pyc
 venv
+db.sqlite3
+media
