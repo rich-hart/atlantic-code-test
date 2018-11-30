@@ -35,6 +35,7 @@ Once uploaded the `customers`, `addresses`, `products`, and `records` endpoints 
 To view the database use the command `sqlite3 db.sqlite3`.
 
 ## TODO
+The relation between `addresses` and `customers` needs to be fixed.  Customers should have a foriegn key to Addresses.
 
 Authentication and authorization capabilities
 
