@@ -33,3 +33,9 @@ Use the `documents` endpoint to upload `.tsv` files.
 Once uploaded the `customers`, `addresses`, `products`, and `records` endpoints will be populated.
 
 To view the database use the command `sqlite3 db.sqlite3`.
+
+## TODO
+
+Authentication and authorization capabilities
+Upload progress indicator
+Irregularity detection and alerting
