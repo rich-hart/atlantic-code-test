@@ -3,8 +3,8 @@ import codecs
 from django.shortcuts import render
 from rest_framework import viewsets
 
-from .models import Document
-from .serializers import DocumentSerializer
+from .models import Document, Customer
+from .serializers import DocumentSerializer, CustomerSerializer
 
 class DocumentViewSet(viewsets.ModelViewSet):
     queryset = Document.objects.all()
@@ -17,3 +17,7 @@ class DocumentViewSet(viewsets.ModelViewSet):
         reader = csv.reader(buffer_fp, delimiter='\t')
         for row in reader:
             print(row)
+
+class CustomerViewSet(viewsets.ModelViewSet):
+    queryset = Customer.objects.all()
+    serializer_class = CustomerSerializer
