@@ -37,5 +37,7 @@ To view the database use the command `sqlite3 db.sqlite3`.
 ## TODO
 
 Authentication and authorization capabilities
+
 Upload progress indicator
+
 Irregularity detection and alerting
