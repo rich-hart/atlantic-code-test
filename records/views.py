@@ -3,8 +3,8 @@ import codecs
 from django.shortcuts import render
 from rest_framework import viewsets
 
-from .models import Document, Customer, Address, Product
-from .serializers import DocumentSerializer, CustomerSerializer, AddressSerializer, ProductSerializer
+from .models import Document, Customer, Address, Product, Record
+from .serializers import DocumentSerializer, CustomerSerializer, AddressSerializer, ProductSerializer, RecordSerializer
 
 class DocumentViewSet(viewsets.ModelViewSet):
     queryset = Document.objects.all()
@@ -29,3 +29,7 @@ class AddressViewSet(viewsets.ModelViewSet):
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+
+class RecordViewSet(viewsets.ModelViewSet):
+    queryset = Record.objects.all()
+    serializer_class = RecordSerializer

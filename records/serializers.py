@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Document, Customer, Address, Product
+from .models import Document, Customer, Address, Product, Record
 
 class DocumentSerializer(serializers.ModelSerializer):
     class Meta:
@@ -20,4 +20,9 @@ class AddressSerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ('id', 'name', 'amount') 
+        fields = ('id', 'name', 'amount')
+
+class RecordSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Record
+        fields = ('document','customer','address','product','status','timestamp')
