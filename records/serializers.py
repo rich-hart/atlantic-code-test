@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Document, Customer 
+from .models import Document, Customer, Address
 
 class DocumentSerializer(serializers.ModelSerializer):
     class Meta:
@@ -12,3 +12,7 @@ class CustomerSerializer(serializers.ModelSerializer):
         model = Customer
         fields = ('id','first_name','last_name')
 
+class AddressSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Address
+        fields = ('street','state','zip_code')
